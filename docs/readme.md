@@ -9,7 +9,7 @@ evaluates the first argument for being an associative array and returns a boolea
 Mossengine\Helpers\_Array\_IsAssociative::_IsAssociative(['a' => 'A']);
 
 // Mossengine Helper usage ( intended )
-Mossengine\Helper::Array()::IsAssociative(['a' => 'A']);
+Mossengine\Helper::Array()->IsAssociative(['a' => 'A']);
 ```
 
 #### has
@@ -20,7 +20,7 @@ note: this supports dot notation key paths.
 Mossengine\Helpers\_Array\_Has::_Has(['a' => 'A', 'a']);
 
 // Mossengine Helper usage ( intended )
-Mossengine\Helper::Array()::Has(['a' => 'A', 'a']);
+Mossengine\Helper::Array()->Has(['a' => 'A', 'a']);
 ```
 
 #### get
@@ -31,7 +31,7 @@ note: this supports dot notation key paths.
 Mossengine\Helpers\_Array\_Get::_Get(['a' => 'A'], 'b', 'B');
 
 // Mossengine Helper usage ( intended )
-Mossengine\Helper::Array()::Get(['a' => 'A'], 'b', 'B');
+Mossengine\Helper::Array()->Get(['a' => 'A'], 'b', 'B');
 ```
 
 #### set
@@ -45,7 +45,7 @@ $array = ['a' => 'A'];
 Mossengine\Helpers\_Array\_Set::_Set($array, 'b', 'B');
 
 // Mossengine Helper usage ( intended )
-Mossengine\Helper::Array()::Set($array, 'b', 'B');
+Mossengine\Helper::Array()->Set($array, 'b', 'B');
 ```
 
 #### forget
@@ -59,7 +59,7 @@ $array = ['a' => 'A'];
 Mossengine\Helpers\_Array\_Forget::_Forget($array, 'a');
 
 // Mossengine Helper usage ( intended )
-Mossengine\Helper::Array()::Forget($array, 'a');
+Mossengine\Helper::Array()->Forget($array, 'a');
 ```
 
 #### every
@@ -69,7 +69,7 @@ Iterates over the second argument array using the first argument as a callable t
 Mossengine\Helpers\_Array\_Every::_Every(function($value) { return $value > 0; }, ['a' => 1,'b' => 2,'c' => 3]);
 
 // Mossengine Helper usage ( intended )
-Mossengine\Helper::Array()::Every(function($value) { return $value > 0; }, ['a' => 1,'b' => 2,'c' => 3]);
+Mossengine\Helper::Array()->Every(function($value) { return $value > 0; }, ['a' => 1,'b' => 2,'c' => 3]);
 ```
 
 #### some
@@ -79,7 +79,7 @@ Iterates over the second argument array using the first argument as a callable t
 Mossengine\Helpers\_Array\_Some::_Some(function($value) { return $value > 0; }, ['a' => 0,'b' => 2,'c' => 3]);
 
 // Mossengine Helper usage ( intended )
-Mossengine\Helper::Array()::Some(function($value) { return $value > 0; }, ['a' => 0,'b' => 2,'c' => 3]);
+Mossengine\Helper::Array()->Some(function($value) { return $value > 0; }, ['a' => 0,'b' => 2,'c' => 3]);
 ```
 
 #### firstKey
@@ -89,7 +89,7 @@ Returns the first key in the first argument's array
 Mossengine\Helpers\_Array\_FirstKey::_FirstKey(['a' => 'A', 'b' => 'B', 'c' => 'C']);
 
 // Mossengine Helper usage ( intended )
-Mossengine\Helper::Array()::FirstKey(['a' => 'A', 'b' => 'B', 'c' => 'C']);
+Mossengine\Helper::Array()->FirstKey(['a' => 'A', 'b' => 'B', 'c' => 'C']);
 ```
 
 #### nthKey
@@ -99,7 +99,7 @@ Returns the key at the nth position in the first argument's array
 Mossengine\Helpers\_Array\_NthKey::_NthKey(['a' => 'A', 'b' => 'B', 'c' => 'C']);
 
 // Mossengine Helper usage ( intended )
-Mossengine\Helper::Array()::NthKey(['a' => 'A', 'b' => 'B', 'c' => 'C']);
+Mossengine\Helper::Array()->NthKey(['a' => 'A', 'b' => 'B', 'c' => 'C']);
 ```
 
 #### lastKey
@@ -109,7 +109,7 @@ Returns the last key in the first argument's array
 Mossengine\Helpers\_Array\_LastKey::_LastKey(['a' => 'A', 'b' => 'B', 'c' => 'C']);
 
 // Mossengine Helper usage ( intended )
-Mossengine\Helper::Array()::LastKey(['a' => 'A', 'b' => 'B', 'c' => 'C']);
+Mossengine\Helper::Array()->LastKey(['a' => 'A', 'b' => 'B', 'c' => 'C']);
 ```
 
 #### firstValue
@@ -119,7 +119,7 @@ Returns the first value in the first argument's array
 Mossengine\Helpers\_Array\_FirstValue::_FirstValue(['a' => 'A', 'b' => 'B', 'c' => 'C']);
 
 // Mossengine Helper usage ( intended )
-Mossengine\Helper::Array()::FirstValue(['a' => 'A', 'b' => 'B', 'c' => 'C']);
+Mossengine\Helper::Array()->FirstValue(['a' => 'A', 'b' => 'B', 'c' => 'C']);
 ```
 
 #### nthValue
@@ -129,7 +129,7 @@ Returns the value at the nth position in the first argument's array
 Mossengine\Helpers\_Array\_NthValue::_NthValue(['a' => 'A', 'b' => 'B', 'c' => 'C']);
 
 // Mossengine Helper usage ( intended )
-Mossengine\Helper::Array()::NthValue(['a' => 'A', 'b' => 'B', 'c' => 'C']);
+Mossengine\Helper::Array()->NthValue(['a' => 'A', 'b' => 'B', 'c' => 'C']);
 ```
 
 #### lastValue
@@ -139,5 +139,5 @@ Returns the last value in the first argument's array
 Mossengine\Helpers\_Array\_LastValue::_LastValue(['a' => 'A', 'b' => 'B', 'c' => 'C']);
 
 // Mossengine Helper usage ( intended )
-Mossengine\Helper::Array()::LastValue(['a' => 'A', 'b' => 'B', 'c' => 'C']);
+Mossengine\Helper::Array()->LastValue(['a' => 'A', 'b' => 'B', 'c' => 'C']);
 ```

@@ -1,9 +1,9 @@
 <?php
 
 /**
- * Class HelperSArrayTest
+ * Class HelpersArrayTest
  */
-class HelperSArrayTest extends PHPUnit_Framework_TestCase
+class HelpersArrayTest extends PHPUnit_Framework_TestCase
 {
     public function testIfArrayIsAssociative() {
         $this->assertTrue(

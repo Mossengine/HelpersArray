@@ -45,7 +45,7 @@ require 'vendor/autoload.php';
 $result = Mossengine\Helpers\_Array\_IsAssociative::_IsAssociative(['a' => 'A']);
 
 // Mossengine Helper usage ( intended )
-$result = Mossengine\Helper::Array()::IsAssociative(['a' => 'A']);
+$result = Mossengine\Helper::Array()->IsAssociative(['a' => 'A']);
 ```
 
 ## Documentation
