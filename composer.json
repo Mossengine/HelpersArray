@@ -1,0 +1,54 @@
+{
+  "name": "mossengine/helpersarray",
+  "type": "library",
+  "description": "A PHP sub library for the Mossengine/Helper library that provides Array helper functions",
+  "keywords": [
+    "helpers",
+    "array",
+    "arrays",
+    "functions"
+  ],
+  "homepage": "https://github.com/Mossengine/HelpersArray",
+  "support": {
+    "issues": "https://github.com/Mossengine/HelpersArray/issues",
+    "source": "https://github.com/Mossengine/HelpersArray"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Brendon Moss",
+      "email": "brenmoss@mossengine.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.0",
+    "ramsey/uuid": "^3.4.1",
+    "illuminate/support": "^5.2.32",
+    "ext-json": "*"
+  },
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "~2",
+    "phpunit/phpunit": "~4.0 || ~5.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Mossengine\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "scripts": {
+    "test": [
+      "@phpunit",
+      "@phpcs"
+    ],
+    "phpunit": "phpunit",
+    "phpcs": "php-cs-fixer fix -v --diff --dry-run"
+  }
+}
