@@ -6,48 +6,68 @@
 class HelpersArrayTest extends PHPUnit_Framework_TestCase
 {
     public function testIfArrayIsAssociative() {
+        $array = ['a' => 'A'];
         $this->assertTrue(
-            \Mossengine\Helpers\_Array\_IsAssociative::_IsAssociative(['a' => 'A'])
+            \Mossengine\Helpers\_Array\_IsAssociative::_IsAssociative($array)
         );
     }
     public function testIfNotArrayIsAssociative() {
+        $array = ['a','b'];
         $this->assertFalse(
-            \Mossengine\Helpers\_Array\_IsAssociative::_IsAssociative(['a','b'])
+            \Mossengine\Helpers\_Array\_IsAssociative::_IsAssociative($array)
         );
     }
     public function testIfArrayHas() {
+        $array = ['a' => 'A'];
         $this->assertTrue(
-            \Mossengine\Helpers\_Array\_Has::_Has(['a' => 'A'], 'a')
+            \Mossengine\Helpers\_Array\_Has::_Has($array, 'a')
         );
     }
     public function testIfNotArrayHas() {
+        $array = ['b' => 'B'];
         $this->assertFalse(
-            \Mossengine\Helpers\_Array\_Has::_Has(['b' => 'B'], 'a')
+            \Mossengine\Helpers\_Array\_Has::_Has($array, 'a')
         );
     }
     public function testIfArrayGet() {
+        $array = ['a' => 'A'];
         $this->assertEquals(
             'A',
-            \Mossengine\Helpers\_Array\_Get::_Get(['a' => 'A'], 'a')
+            \Mossengine\Helpers\_Array\_Get::_Get($array, 'a')
         );
     }
     public function testIfNotArrayGet() {
+        $array = ['b' => 'B'];
         $this->assertNotEquals(
             'A',
-            \Mossengine\Helpers\_Array\_Get::_Get(['b' => 'B'], 'a', 'default')
+            \Mossengine\Helpers\_Array\_Get::_Get($array, 'a', 'default')
         );
     }
     public function testIfArraySet() {
-        $array = \Mossengine\Helpers\_Array\_Set::_Set([], 'a', 'A');
+        $array = [];
+        $array = \Mossengine\Helpers\_Array\_Set::_Set($array, 'a', 'A');
         $this->assertEquals(
             [
                 'a' => 'A'
             ],
             $array
         );
+        $array = \Mossengine\Helpers\_Array\_Set::_Set($array, 'b.c.d', 'D');
+        $this->assertEquals(
+            [
+                'a' => 'A',
+                'b' => [
+                    'c' => [
+                        'd' => 'D'
+                    ]
+                ]
+            ],
+            $array
+        );
     }
     public function testIfNotArraySet() {
-        $array = \Mossengine\Helpers\_Array\_Set::_Set([], 'a', 'A');
+        $array = [];
+        $array = \Mossengine\Helpers\_Array\_Set::_Set($array, 'a', 'A');
         $this->assertNotEquals(
             [
                 'b' => 'B'

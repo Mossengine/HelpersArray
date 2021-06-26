@@ -16,7 +16,8 @@ class _Set
      * @return array
      */
     public static function _Set(array $array, $stringPath, $mixedValue) : array {
-        return Arr::set($array, $stringPath, $mixedValue);
+        Arr::set($array, $stringPath, $mixedValue);
+        return $array;
     }
 
 }
